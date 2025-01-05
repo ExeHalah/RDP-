@@ -1,4 +1,4 @@
-name: SATURN 444 LK
+name: RDP
 
 on:
   workflow_dispatch:
@@ -46,7 +46,7 @@ jobs:
     - name: new feature lol
       run: |
         $WallpaperUrl = "https://i.ibb.co/Jqb9yCt/IMG-20250103-190201-398.jpg"
-        $WallpaperPath = "$WallpaperPath = "$Env:USERPROFILE\Documents\wallpaper.jpg""
+        $WallpaperPath = "$Env:USERPROFILE\Documents\wallpaper.jpg"
 
         # Download the wallpaper
         Invoke-WebRequest -Uri $WallpaperUrl -OutFile $WallpaperPath
@@ -108,4 +108,3 @@ jobs:
             Start-Sleep 60
             $i--
         } while ($i -gt 0)
-        
