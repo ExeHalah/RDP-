@@ -41,28 +41,7 @@ jobs:
             throw "$packageName failed to install via Chocolatey after multiple attempts."
         }
         Install-PackageWithRetry -packageName "chrome-remote-desktop-host"
-        Install-PackageWithRetry -packageName "googlechrome"
-
-    - name: new feature lol
-      run: |
-        $WallpaperUrl = "https://i.ibb.co/Jqb9yCt/IMG-20250103-190201-398.jpg"
-        $WallpaperPath = "$Env:USERPROFILE\Documents\wallpaper.jpg"
-
-        # Download the wallpaper
-        Invoke-WebRequest -Uri $WallpaperUrl -OutFile $WallpaperPath
-        
-        # Set the wallpaper
-        Add-Type -TypeDefinition @"
-        using System;
-        using System.Runtime.InteropServices;
-        public class Wallpaper {
-            [DllImport("user32.dll", CharSet = CharSet.Auto)]
-            public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
-        }
-        "@
-
-        [Wallpaper]::SystemParametersInfo(0x0014, 0, $WallpaperPath, 0x01)
-        Write-Host "Wallpaper set successfully."
+        Install-PackageWithRetry -packageName "googlechrome
 
     - name: Download and Extract Free Fire Ripper
       continue-on-error: true
