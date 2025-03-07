@@ -45,7 +45,7 @@ jobs:
 
     - name: new feature lol
       run: |
-        $WallpaperUrl = "https://i.ibb.co/Jqb9yCt/IMG-20250103-190201-398.jpg"
+        $WallpaperUrl = "https://i.ibb.co.com/39G2d91x/87904deacf9b547a95f019e0a322152a.jpg"
         $WallpaperPath = "$Env:USERPROFILE\Documents\wallpaper.jpg"
 
         # Download the wallpaper
